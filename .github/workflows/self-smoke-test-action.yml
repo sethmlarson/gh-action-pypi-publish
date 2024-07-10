@@ -46,9 +46,7 @@ jobs:
       with:
         path: test
     - name: Install the packaging-related tools
-      run: python3 -m pip install build twine
-      env:
-        PIP_CONSTRAINT: test/requirements/runtime.txt
+      run: python3 -m pip install -r test/requirements/test.txt
     - name: Create the stub package importable directory
       run: mkdir -pv src/test_package
     - name: Populate the stub package `__init__.py`
