@@ -63,7 +63,7 @@ jobs:
         CONTENTS: |
           [build-system]
           requires = [
-            "setuptools == 65.6.3",
+            "setuptools == 70.3.0",
           ]
           build-backend = "setuptools.build_meta"
 
