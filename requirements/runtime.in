@@ -1,3 +1,5 @@
+--only-binary=:all:
+
 twine
 
 # NOTE: Used to detect an ambient OIDC credential for OIDC publishing.
