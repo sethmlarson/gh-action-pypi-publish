@@ -16,12 +16,10 @@ ENV PYTHONPATH "/root/.local/lib/python3.12/site-packages"
 
 COPY requirements requirements
 RUN \
-  PIP_CONSTRAINT=requirements/runtime-prerequisites.txt \
-    pip install --user --upgrade --no-cache-dir \
-      -r requirements/runtime-prerequisites.in && \
-  PIP_CONSTRAINT=requirements/runtime.txt \
-    pip install --user --upgrade --no-cache-dir --prefer-binary \
-      -r requirements/runtime.in
+  pip install --user --upgrade --no-cache-dir \
+      -r requirements/runtime-prerequisites.txt && \
+  pip install --user --upgrade --no-cache-dir --prefer-binary \
+      -r requirements/runtime.txt
 
 WORKDIR /app
 COPY LICENSE.md .
